@@ -6,7 +6,8 @@
 		},
 		"auth": {
 			"type": "confirm",
-			"message": "Install auth token?"
+			"message": "Install auth token?",
+			"initial": true
 		},
 		"scraping": {
 			"type": "confirm",

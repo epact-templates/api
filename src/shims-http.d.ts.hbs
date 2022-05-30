@@ -1,0 +1,19 @@
+import "express"
+{{#if scraping}}
+import type { AxiosInstance } from "axios"
+{{/if}}
+
+declare global {
+  namespace Express {
+    export interface Request {
+      {{#if scraping}}
+      http: AxiosInstance
+      {{/if}}
+      {{#if auth}}
+      user: {
+        token: string
+      } | null
+      {{/if}}
+    }
+  }
+}

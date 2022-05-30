@@ -1,0 +1,12 @@
+import { defineConfig } from "epact"
+
+export default defineConfig({
+  {{#if vercel}}
+  baseUrl: "/api",
+  {{/if}}
+  boot: ["dotenv", "plugins", {{#if auth}}"auth"{{/if}}, {{#if scraping}}"http"{{/if}}]{{#if vercel}},
+  build: {
+    footer: "module.exports = module.exports.default",
+    pkgFile: true
+  }{{/if}}
+})

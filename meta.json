@@ -1,0 +1,22 @@
+{
+	"prompts": {
+		"vercel": {
+			"type": "confirm",
+			"message": "App is Vercel app?"
+		},
+		"auth": {
+			"type": "confirm",
+			"message": "Install auth token?"
+		},
+		"scraping": {
+			"type": "confirm",
+			"message": "Scraping data?"
+		}
+	},
+	"filters": {
+		".github/workflows/build-vercel.yml": "vercel",
+		"publish/vercel.json": "vercel",
+		"src/boot/auth.*": "auth",
+		"deploy-vercel.sh": "vercel"
+	}
+}

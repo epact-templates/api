@@ -15,9 +15,9 @@
 		}
 	},
 	"filters": {
-		".github/workflows/build-vercel.yml": "vercel",
-		"publish/vercel.json": "vercel",
-		"src/boot/auth.*": "auth",
-		"deploy-vercel.sh": "vercel"
+		".github/workflows/build-vercel.yml": "!vercel",
+		"publish/vercel.json": "!vercel",
+		"src/boot/auth.*": "!auth",
+		"deploy-vercel.sh": "!vercel"
 	}
 }

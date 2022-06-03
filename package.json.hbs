@@ -8,7 +8,7 @@
     "dev": "epact dev",
     {{#if vercel}}
     "build:epact": "epact build",
-    "build": "sh ./deploy-vercel.sh",
+    "build:vercel": "sh ./deploy-vercel.sh",
     {{/if}}
     {{#unless vercel}}
     "build": "epact build",
